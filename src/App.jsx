@@ -3,6 +3,7 @@ import { Accueil } from "./pages/Accueil"
 import { Exemple } from "./pages/Exemple"
 import { Navbar } from "./layout/Navbar"
 import { Articles } from "./pages/Articles"
+import { SingleArticle } from "./pages/SingleArticle"
 
 const router = createBrowserRouter([
     {
@@ -19,8 +20,17 @@ const router = createBrowserRouter([
             },
             {
                 path: 'articles',
-                element: <Articles />,
-                loader: () => fetch('https://jsonplaceholder.typicode.com/posts?_limit=25')
+                children: [
+                    {
+                        path: '',
+                        element: <Articles />,
+                        loader: () => fetch('https://jsonplaceholder.typicode.com/posts?_limit=25'),
+                    },
+                    {
+                        path: ':id',
+                        element: <SingleArticle />
+                    }
+                ]
             }
         ]
     }

@@ -31,7 +31,7 @@ export function Exemple() {
 
     return <main className="container my-5 row justify-content-center">
         <h4 className="mb-4 text-center">TP de recherche</h4>
-        <div className="col-6">
+        <div className="col-10 col-md-8 col-lg-6">
             <SearchBar
                 search={search}
                 onSearch={setSearch}

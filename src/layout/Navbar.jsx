@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export function Navbar() {
     return <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-            <a className="navbar-brand" href="#">Navbar</a>
+            <NavLink className="navbar-brand fw-semibold" to="/">ACCUEIL</NavLink>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -11,7 +11,7 @@ export function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/">Home</NavLink>
+                        <NavLink className="nav-link" to="/">Acceuil</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/exemple">Exemple</NavLink>
